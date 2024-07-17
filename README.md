@@ -52,10 +52,11 @@ Integration with POA&M and Security Controls: Allows integration of source data 
 - Sources Table: Stores information about different sources used for security assessments.
 
 
-### Sequence
+### Sequences
+
+#### POAM: Addition or Updating
 
 ![](./src/POAM-Sequence.png)
-
 
 
 
