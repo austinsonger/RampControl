@@ -27,7 +27,40 @@ CREATE TABLE Systems (
     fully_operational DATE NOT NULL,
     deployment_model TEXT NOT NULL,
     authorization_path TEXT NOT NULL,
-    general_system_description TEXT NOT NULL
+    general_system_description TEXT NOT NULL,
+    system_name TEXT NOT NULL,
+    system_acronym TEXT NOT NULL,
+    description TEXT NOT NULL,
+    cloud_service_model TEXT NOT NULL,
+    cloud_deployment_model TEXT NOT NULL,
+    identity_assurance_level INTEGER NOT NULL,
+    authenticator_assurance_level INTEGER NOT NULL,
+    federation_assurance_level INTEGER NOT NULL,
+    authorization_type TEXT NOT NULL,
+    security_sensitivity_level TEXT NOT NULL,
+    information_types TEXT NOT NULL -- JSON encoded string for information types
+);
+
+-- Create table for storing system locations
+CREATE TABLE Locations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    system_id INTEGER NOT NULL,
+    location_type TEXT NOT NULL, -- e.g., CSP HQ, Primary Data Center, Secondary Data Center
+    address TEXT NOT NULL,
+    FOREIGN KEY (system_id) REFERENCES Systems(id)
+);
+
+-- Create table for storing parties and roles
+CREATE TABLE Parties (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    system_id INTEGER NOT NULL,
+    role_id TEXT NOT NULL, -- e.g., FedRAMP PMO, FedRAMP JAB, Prepared By
+    party_name TEXT NOT NULL,
+    party_description TEXT,
+    party_email TEXT,
+    party_phone TEXT,
+    party_address TEXT,
+    FOREIGN KEY (system_id) REFERENCES Systems(id)
 );
 
 -- Create table for storing POA&M entries
@@ -36,11 +69,18 @@ CREATE TABLE POAM (
     system_id INTEGER NOT NULL,
     date_identified DATE NOT NULL,
     control_identifier TEXT NOT NULL,
-    deviations TEXT NOT NULL,
     findings TEXT NOT NULL,
     action_plan TEXT NOT NULL, -- JSON encoded string for action plan details
     milestones TEXT NOT NULL,  -- JSON encoded string for milestones details
     FOREIGN KEY (system_id) REFERENCES Systems(id)
+);
+
+-- Create table for storing POA&M deviations
+CREATE TABLE POAM_Deviations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    poam_id INTEGER NOT NULL,
+    deviation_type TEXT NOT NULL, -- e.g., Functional, Operational, Risk Assessment
+    FOREIGN KEY (poam_id) REFERENCES POAM(id)
 );
 
 -- Create table for storing Security Controls
@@ -61,6 +101,7 @@ CREATE TABLE Sources (
     source_name TEXT NOT NULL,
     source_description TEXT NOT NULL
 );
+
 
 ```
 

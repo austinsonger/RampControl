@@ -1,8 +1,8 @@
 # OSCAL & POAM App Project 
 
+## OSCAL
 
-
-## Key Components of OSCAL
+### Key Components of OSCAL
 - Catalogs: Define security controls.
 - Profiles: Tailor controls to specific needs.
 - Component Definitions (CDEF): Supplier provided documentation describing how a component that is a building block of a larger information system can be used to implement controls.
@@ -12,18 +12,43 @@
 - Plan of Action and Milestones (POA&M): Track issues and remediation plans.
 
 
-## Development Environment
-To work with OSCAL, you’ll need tools for handling XML, JSON, or YAML. Here’s a basic setup:
 
-### Required Tools
-- XML/JSON/YAML Editors: Tools like VSCode, Sublime Text, or IntelliJ IDEA.
-- Format Validation Tools: Validators or tools like xmllint (for XML), jq (for JSON), and yamllint (for YAML).
-- Version Control: Use Git to manage versions of your OSCAL documents.
-- Programming Languages: Programming languages such as Java, JavaScript/TypeScript, Python, or other languages with libraries to manipulate these formats, if you need to develop custom tools or integrations.
+## POAM App Draft
+
+### Dashboard
 
 
+```
+--------------------------------------------------------
+|                    Dashboard                         |
+--------------------------------------------------------
+| Systems | POA&M Entries | Security Controls | Sources |
+--------------------------------------------------------
+| ---------------------------------------------------  |
+| | Systems Overview Card                             | |
+| | Total Systems: 1                                 | |
+| | [Add New System]                                  | |
+| ---------------------------------------------------  |
+| ---------------------------------------------------  |
+| | POA&M Entries Overview Card                       | |
+| | Total Entries: 15                                 | |
+| | [Add New Entry]                                   | |
+| ---------------------------------------------------  |
+| ---------------------------------------------------  |
+| | Security Controls Overview Card                   | |
+| | Total Controls: 50                                | |
+| ---------------------------------------------------  |
+| ---------------------------------------------------  |
+| | Sources Overview Card                             | |
+| | Total Sources: 5                                  | |
+| | [Add New Source]                                  | |
+| ---------------------------------------------------  |
+--------------------------------------------------------
+|                Company Information                   |
+|                Contact Information                   |
+--------------------------------------------------------
+```
 
-# POAM 
 
 
 
