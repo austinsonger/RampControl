@@ -51,6 +51,14 @@ Integration with POA&M and Security Controls: Allows integration of source data 
 - SecurityControls Table: Stores details about the security controls, including implementation status and responsible roles.
 - Sources Table: Stores information about different sources used for security assessments.
 
+
+### Sequence
+
+![](./src/POAM-Sequence.png)
+
+
+
+
 ### OSCAL Exports
 
 
@@ -172,3 +180,6 @@ CREATE TABLE Sources (
 
 
 
+ 
+
+[poamSequenceImage]: src/POAM-Sequence.png
