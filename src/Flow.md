@@ -2,7 +2,8 @@
 
 # POAM Sequence
 
-!()[src/POAM-Sequence.png]
+![POAM Sequence](src/POAM-Sequence.png)
+
 
 
 
