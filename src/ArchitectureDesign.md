@@ -1,3 +1,42 @@
+
+
+Application is designed to manage and track security compliance in accordance with FedRAMP requirements. It enables users to add new systems, manage security controls, and handle Plan of Action and Milestones (POA&M) entries efficiently. 
+
+### System Security Plan:
+
+- Users can navigate to the "Systems" section and add new systems by providing essential details such as CSP name, CSO name, FedRAMP package ID, service model (e.g., IaaS, PaaS, SaaS), Digital Identity Level (DIL) determination, FIPS PUB 199 level, fully operational date, deployment model (e.g., public cloud, hybrid cloud), authorization path (e.g., Joint Authorization Board, Provisional Authorization), and a general system description.
+
+### POA&M Management:
+
+- Create and Update POA&M Entries: Users can navigate to the "POA&M" section to add new entries or update existing ones. Each entry includes basic information such as the system name, date identified, control identifier, deviation types (functional, operational, risk assessment), detailed findings, action plans, and milestones.
+- Existing Entries Check: The application displays existing POA&M entries for a selected system, allowing users to choose whether to create a new entry or update an existing one.
+
+
+### Source Management:
+
+Add and Manage Sources: Users can manage different sources (e.g., Nessus) that provide security assessments and data. Each source entry includes a name and description.
+Integration with POA&M and Security Controls: Allows integration of source data into POA&M entries and security controls, facilitating detailed analysis and tracking.
+
+
+### User Interface
+- Forms for Data Entry: Intuitive forms for adding and updating system information, POA&M entries, and security controls.
+- Search and Filter Capabilities: Easy search and filter options to locate existing entries and systems.
+- Dashboard: Overview dashboard displaying key metrics and statuses of systems, POA&M entries, and security controls.
+
+
+### Backend API
+- Data Validation and Storage: Handles data validation to ensure consistency and accuracy before storing in the database.
+- CRUD Operations: Manages Create, Read, Update, and Delete operations for systems, POA&M entries, security controls, and sources.
+
+### Database
+- Systems Table: Stores details about the security systems plans being added.
+- POAM Table: Stores entries related to Plan of Action and Milestones (POA&M) for each system.
+- SecurityControls Table: Stores details about the security controls, including implementation status and responsible roles.
+- Sources Table: Stores information about different sources used for security assessments.
+
+### OSCAL Exports
+
+
 # Components:
 
 ## User Interface (UI):
