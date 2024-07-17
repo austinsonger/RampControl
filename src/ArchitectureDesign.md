@@ -1,7 +1,7 @@
 
-# Usage 
+### Purpose 
 
-Application is designed to manage and track security compliance in accordance with FedRAMP requirements. It enables users to add new systems, manage security controls, and handle Plan of Action and Milestones (POA&M) entries efficiently. 
+Application is designed to manage and track security compliance in accordance with FedRAMP requirements. It enables users to add new security system plan and handle Plan of Action and Milestones (POA&M) entries efficiently, and produce exports in OSCAL formats.
 
 ### System Security Plan:
 
