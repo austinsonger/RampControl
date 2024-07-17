@@ -1,0 +1,3 @@
+[submodule "fedramp_automation"]
+	path = fedramp_automation
+	url = https://github.com/GSA/fedramp-automation.git
