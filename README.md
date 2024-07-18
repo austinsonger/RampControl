@@ -56,7 +56,7 @@ Integration with POA&M and Security Controls: Allows integration of source data 
 
 #### POAM: Addition or Updating
 
-![](./src/POAM-Sequence.png)
+![](./docs/POAM-Sequence.png)
 
 
 
@@ -180,7 +180,3 @@ CREATE TABLE Sources (
 
 
 
-
- 
-
-[poamSequenceImage]: src/POAM-Sequence.png
