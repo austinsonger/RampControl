@@ -21,13 +21,66 @@ The AssureFlow is designed to manage and track security compliance in accordance
 - Assessment Results (SAR): Document the outcomes of assessments.
 - Plan of Action and Milestones (POA&M): Track issues and remediation plans.
 
+## User Interface
+- Forms for Data Entry: Intuitive forms for adding and updating system information, POA&M entries, and security controls.
+- Search and Filter Capabilities: Easy search and filter options to locate existing entries and systems.
+- Dashboard: Overview dashboard displaying key metrics and statuses of systems, POA&M entries, and security controls.
+
+## Backend API
+- Data Validation and Storage: Handles data validation to ensure consistency and accuracy before storing in the database.
+- CRUD Operations: Manages Create, Read, Update, and Delete operations for systems, POA&M entries, security controls, and sources.
+
+## Database Schema
+- Systems Table: Stores details about the security systems plans being added.
+- POAM Table: Stores entries related to Plan of Action and Milestones (POA&M) for each system.
+- SecurityControls Table: Stores details about the security controls, including implementation status and responsible roles.
+- Sources Table: Stores information about different sources used for security assessments.
+
+## OSCAL Exports
+- Export Functionality: Allows exporting of data in OSCAL format for use in compliance documentation.
 
 
 
+## Project Structure
 
+```
+AssureFlow/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── routes.py
+│   ├── forms.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── index.html
+│   │   ├── manage_systems.html
+│   │   ├── manage_poam.html
+│   │   ├── manage_sources.html
+│   │   ├── manage_security_controls.html
+│   ├── static/
+│   │   ├── styles.css
+│   │   ├── uswds.min.css (if not using CDN)
+│   │   ├── uswds.min.js (if not using CDN)
+│   │   ├── htmx.min.js (if not using CDN)
+│   │   ├── fonts/
+│   │   ├── img/
+│
+├── migrations/
+│
+├── tests/
+│   ├── test_export_oscal.py
+│
+├── venv/
+│
+├── config.py
+│
+├── run.py
+│
+├── requirements.txt
+│
+└── README.md
 
-
-
-
+```
 
 
