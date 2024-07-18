@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Manage Security Controls</h1>
-    <form method="POST" hx-post="{{ url_for('manage_security_controls') }}" hx-target="body" class="usa-form">
+    <form method="POST" hx-post="{{ url_for('main.manage_security_controls') }}" hx-target="body" class="usa-form">
         {{ form.hidden_tag() }}
         <div class="usa-form-group">
             {{ form.control_id.label(class="usa-label") }} 

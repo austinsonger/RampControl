@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Manage Systems</h1>
-    <form method="POST" hx-post="{{ url_for('manage_systems') }}" hx-target="body" class="usa-form">
+    <form method="POST" hx-post="{{ url_for('main.manage_systems') }}" hx-target="body" class="usa-form">
         {{ form.hidden_tag() }}
         <div class="usa-form-group">
             {{ form.csp_name.label(class="usa-label") }} 

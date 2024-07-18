@@ -2,7 +2,7 @@
 
 {% block content %}
     <h1>Manage Sources</h1>
-    <form method="POST" hx-post="{{ url_for('manage_sources') }}" hx-target="body" class="usa-form">
+    <form method="POST" hx-post="{{ url_for('main.manage_sources') }}" hx-target="body" class="usa-form">
         {{ form.hidden_tag() }}
         <div class="usa-form-group">
             {{ form.source_name.label(class="usa-label") }} 
