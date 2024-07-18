@@ -2,3 +2,5 @@ Flask==2.1.2
 Flask-SQLAlchemy==2.5.1
 Flask-WTF==1.0.0
 Flask-Testing==0.8.1
+Werkzeug==2.0.3
+SQLAlchemy==1.4.47

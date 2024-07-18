@@ -3,9 +3,10 @@
 {% block content %}
     <h1>Welcome to FedRAMPFlow</h1>
     <ul>
-        <li><a href="{{ url_for('manage_systems') }}">Manage Systems</a></li>
-        <li><a href="{{ url_for('manage_poam') }}">Manage POAM</a></li>
-        <li><a href="{{ url_for('manage_sources') }}">Manage Sources</a></li>
-        <li><a href="{{ url_for('manage_security_controls') }}">Manage Security Controls</a></li>
+        <li><a href="{{ url_for('main.manage_systems') }}">Manage Systems</a></li>
+        <li><a href="{{ url_for('main.manage_poam') }}">Manage POAM</a></li>
+        <li><a href="{{ url_for('main.manage_sources') }}">Manage Sources</a></li>
+        <li><a href="{{ url_for('main.manage_security_controls') }}">Manage Security Controls</a></li>
     </ul>
 {% endblock %}
+
