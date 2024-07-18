@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Manage Sources</h1>
+    <form method="POST" hx-post="{{ url_for('manage_sources') }}" hx-target="body" class="usa-form">
+        {{ form.hidden_tag() }}
+        <div class="usa-form-group">
+            {{ form.source_name.label(class="usa-label") }} 
+            {{ form.source_name(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.source_description.label(class="usa-label") }} 
+            {{ form.source_description(class="usa-textarea") }}
+        </div>
+        <button type="submit" class="usa-button">Add Source</button>
+    </form>
+
+    <ul class="usa-list usa-list--unstyled">
+        {% for source in sources %}
+            <li>{{ source.source_name }} - {{ source.source_description }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

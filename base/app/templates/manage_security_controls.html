@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Manage Security Controls</h1>
+    <form method="POST" hx-post="{{ url_for('manage_security_controls') }}" hx-target="body" class="usa-form">
+        {{ form.hidden_tag() }}
+        <div class="usa-form-group">
+            {{ form.control_id.label(class="usa-label") }} 
+            {{ form.control_id(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_name.label(class="usa-label") }} 
+            {{ form.control_name(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_description.label(class="usa-label") }} 
+            {{ form.control_description(class="usa-textarea") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_implementation.label(class="usa-label") }} 
+            {{ form.control_implementation(class="usa-textarea") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_status.label(class="usa-label") }} 
+            {{ form.control_status(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.responsible_roles.label(class="usa-label") }} 
+            {{ form.responsible_roles(class="usa-textarea") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_origination.label(class="usa-label") }} 
+            {{ form.control_origination(class="usa-textarea") }}
+        </div>
+        <button type="submit" class="usa-button">Add Security Control</button>
+    </form>
+
+    <ul class="usa-list usa-list--unstyled">
+        {% for control in controls %}
+            <li>{{ control.control_id }} - {{ control.control_name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

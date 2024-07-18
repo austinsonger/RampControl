@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedRAMPFlow</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uswds@2.11.2/dist/css/uswds.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uswds@2.11.2/dist/js/uswds.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+</head>
+<body>
+    <header class="usa-header usa-header--basic">
+        <div class="usa-nav-container">
+            <div class="usa-navbar">
+                <div class="usa-logo" id="basic-logo">
+                    <em class="usa-logo__text">
+                        <a href="{{ url_for('main.index') }}" title="Home" aria-label="Home">FedRAMPFlow</a>
+                    </em>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="usa-layout-docs">
+        <div class="grid-container usa-layout-docs__main desktop:grid-col-9 usa-prose">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer class="usa-footer">
+        <div class="grid-container">
+            <div class="usa-footer__primary-section">
+                <div class="usa-footer__primary-container grid-row">
+                    <div class="mobile-lg:grid-col-8">
+                        <h3 class="usa-footer__logo-heading">FedRAMPFlow</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

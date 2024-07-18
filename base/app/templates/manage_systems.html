@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Manage Systems</h1>
+    <form method="POST" hx-post="{{ url_for('manage_systems') }}" hx-target="body" class="usa-form">
+        {{ form.hidden_tag() }}
+        <div class="usa-form-group">
+            {{ form.csp_name.label(class="usa-label") }} 
+            {{ form.csp_name(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.cso_name.label(class="usa-label") }} 
+            {{ form.cso_name(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.fedramp_package_id.label(class="usa-label") }} 
+            {{ form.fedramp_package_id(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.service_model.label(class="usa-label") }} 
+            {{ form.service_model(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.dil_determination.label(class="usa-label") }} 
+            {{ form.dil_determination(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.fips_pub_199_level.label(class="usa-label") }} 
+            {{ form.fips_pub_199_level(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.fully_operational.label(class="usa-label") }} 
+            {{ form.fully_operational(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.deployment_model.label(class="usa-label") }} 
+            {{ form.deployment_model(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.authorization_path.label(class="usa-label") }} 
+            {{ form.authorization_path(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.general_system_description.label(class="usa-label") }} 
+            {{ form.general_system_description(class="usa-textarea") }}
+        </div>
+        <button type="submit" class="usa-button">Add System</button>
+    </form>
+
+    <ul class="usa-list usa-list--unstyled">
+        {% for system in systems %}
+            <li>{{ system.csp_name }} - {{ system.cso_name }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

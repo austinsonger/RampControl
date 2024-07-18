@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Manage POAM</h1>
+    <form method="POST" hx-post="{{ url_for('manage_poam') }}" hx-target="body" class="usa-form">
+        {{ form.hidden_tag() }}
+        <div class="usa-form-group">
+            {{ form.system_id.label(class="usa-label") }} 
+            {{ form.system_id(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.date_identified.label(class="usa-label") }} 
+            {{ form.date_identified(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.control_identifier.label(class="usa-label") }} 
+            {{ form.control_identifier(class="usa-input") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.findings.label(class="usa-label") }} 
+            {{ form.findings(class="usa-textarea") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.action_plan.label(class="usa-label") }} 
+            {{ form.action_plan(class="usa-textarea") }}
+        </div>
+        <div class="usa-form-group">
+            {{ form.milestones.label(class="usa-label") }} 
+            {{ form.milestones(class="usa-textarea") }}
+        </div>
+        <button type="submit" class="usa-button">Add POAM</button>
+    </form>
+
+    <ul class="usa-list usa-list--unstyled">
+        {% for poam in poams %}
+            <li>{{ poam.control_identifier }} - {{ poam.findings }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
