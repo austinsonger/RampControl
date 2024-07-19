@@ -1,4 +1,4 @@
-# AssureFlow
+# RampControl
 
 
 The RampControl is designed to manage and track security compliance in accordance with FedRAMP requirements. It enables users to add new system security plans and manage Plan of Action and Milestones (POA&M) entries. The application also provides functionalities to produce exports in OSCAL (Open Security Controls Assessment Language) formats, which is a standardized format for documenting security controls and assessments.
