@@ -12,6 +12,18 @@ main = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
+@main.route('/get-services', methods=['GET'])
+def get_services():
+    # Load JSON data
+    file_path = 'path/to/your/FedRAMP_data.json'
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    
+    # Extract the authorized services
+    authorized_services = [product['name'] for product in data['Products'] if product['status'] == 'FedRAMP Authorized']
+
+    return render_template('services.html', services=authorized_services)
+
 @main.route('/systems', methods=['GET', 'POST'])
 def manage_systems():
     form = SystemForm()
