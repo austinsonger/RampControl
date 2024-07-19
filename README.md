@@ -1,5 +1,6 @@
 # AssureFlow
 
+
 The AssureFlow is designed to manage and track security compliance in accordance with FedRAMP requirements. It enables users to add new system security plans and manage Plan of Action and Milestones (POA&M) entries. The application also provides functionalities to produce exports in OSCAL (Open Security Controls Assessment Language) formats, which is a standardized format for documenting security controls and assessments.
 
 ## Functionality  
@@ -26,6 +27,34 @@ The AssureFlow is designed to manage and track security compliance in accordance
 - Search and Filter Capabilities: Easy search and filter options to locate existing entries and systems.
 - Dashboard: Overview dashboard displaying key metrics and statuses of systems, POA&M entries, and security controls.
 
+
+### Dashboard
+
+![](/docs/Dashboard.png)
+
+
+
+### Security Controls
+
+![](/docs/Security%20Controls.png)
+
+
+
+### POA&M
+
+![](/docs/POA&M%20-%20Open.png)
+
+
+![](/docs/POA&M%20-%20Closed.png)
+
+
+![](/docs/POA&M%20-%20Deviation%20Request%20-%20OR.png)
+
+
+![](/docs/POA&M%20-%20Deviation%20Request%20-%20FP.png)
+
+
+
 ## Backend API
 - Data Validation and Storage: Handles data validation to ensure consistency and accuracy before storing in the database.
 - CRUD Operations: Manages Create, Read, Update, and Delete operations for systems, POA&M entries, security controls, and sources.
@@ -38,6 +67,11 @@ The AssureFlow is designed to manage and track security compliance in accordance
 
 ## OSCAL Exports
 - Export Functionality: Allows exporting of data in OSCAL format for use in compliance documentation.
+
+
+
+
+
 
 
 
@@ -82,5 +116,8 @@ AssureFlow/
 └── README.md
 
 ```
+
+
+
 
 
