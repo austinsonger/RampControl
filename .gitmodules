@@ -1,3 +1,6 @@
 [submodule "fedramp_automation"]
 	path = fedramp_automation
 	url = https://github.com/GSA/fedramp-automation.git
+[submodule "cvss"]
+	path = cvss
+	url = https://github.com/FIRSTdotorg/cvss-v4-calculator.git
