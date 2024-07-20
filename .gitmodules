@@ -4,3 +4,6 @@
 [submodule "cvss"]
 	path = cvss
 	url = https://github.com/FIRSTdotorg/cvss-v4-calculator.git
+[submodule "oscal-rest"]
+	path = oscal-rest
+	url = https://github.com/EasyDynamics/oscal-rest
