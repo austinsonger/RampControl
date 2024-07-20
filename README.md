@@ -30,28 +30,29 @@ The RampControl is designed to manage and track security compliance in accordanc
 
 ### Dashboard
 
-![](/docs/Dashboard.png)
+![](/docs/poam/Dashboard.png)
+
 
 
 
 ### Security Controls
 
-![](/docs/Security%20Controls.png)
+![](/docs/securitycontrols/ecurity%20Controls.png)
 
 
 
 ### POA&M
 
-![](/docs/POA&M%20-%20Open.png)
+![](/docs/poam/POA&M%20-%20Open.png)
 
 
-![](/docs/POA&M%20-%20Closed.png)
+![](/docs/poam/POA&M%20-%20Closed.png)
 
 
-![](/docs/POA&M%20-%20Deviation%20Request%20-%20OR.png)
+![](/docs/poam/POA&M%20-%20Deviation%20Request%20-%20OR.png)
 
 
-![](/docs/POA&M%20-%20Deviation%20Request%20-%20FP.png)
+![](/docs/poam/POA&M%20-%20Deviation%20Request%20-%20FP.png)
 
 
 
@@ -116,6 +117,7 @@ AssureFlow/
 └── README.md
 
 ```
+
 
 
 
