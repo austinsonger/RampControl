@@ -64,6 +64,19 @@ rampcontrol-fedramp-props:
 - CUSTOMER will explain SATISFACTION of any RESPONSIBILITY associated with the INHERITED CAPABILITY.
 
 
+**Critical Elements**
+Critical Elements
+
+The following information will be REQUIRED to communicate capabilities provided, or a responsibilities shared:
+
+- Export: Provided
+- Export: Responsibilities
+- Responsibility: Responsible-Role
+- UUIDs from SSP related to Provided Capabilities
+- Originating SSP UUID
+- Implementation Status
+
+
 
 ## User Interface
 - Forms for Data Entry: Intuitive forms for adding and updating system information, POA&M entries, and security controls.
