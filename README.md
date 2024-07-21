@@ -128,6 +128,8 @@ The following information will be REQUIRED to communicate capabilities provided,
 
 
 
+![](/docs/poam/UML.png)
+
 
 
 
