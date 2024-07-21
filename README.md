@@ -51,6 +51,20 @@ rampcontrol-fedramp-props:
 - Assessment Results (SAR): Document the outcomes of assessments.
 - Plan of Action and Milestones (POA&M): Track issues and remediation plans.
 
+**Workflow for Responsibility Modeling in OSCAL**
+
+- CSP has PROVIDED a capability.
+- CSP explains what may be inherited in a description.
+- CSP defines the RESPONSIBLE-ROLE for inheriting.
+- CSP also defines the RESPONSIBILITIY associated with the PROVIDED capability.
+- CSP links the RESPONSIBILITY to the PROVIDED capability.
+- CUSTOMER will INHERIT as desired.
+- The CUSTOMER INHERITED description may be a verbatim copy from the CSP.
+- The INHERITED capability will be LINKED to the CSP by UUID from the CSP.
+- CUSTOMER will explain SATISFACTION of any RESPONSIBILITY associated with the INHERITED CAPABILITY.
+
+
+
 ## User Interface
 - Forms for Data Entry: Intuitive forms for adding and updating system information, POA&M entries, and security controls.
 - Search and Filter Capabilities: Easy search and filter options to locate existing entries and systems.
