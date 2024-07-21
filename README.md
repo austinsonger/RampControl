@@ -9,6 +9,35 @@ The RampControl is designed to manage and track security compliance in accordanc
 
 - Users can navigate to the "Systems" section and add new systems by providing essential details such as CSP name, CSO name, FedRAMP package ID, service model (e.g., IaaS, PaaS, SaaS), Digital Identity Level (DIL) determination, FIPS PUB 199 level, fully operational date, deployment model (e.g., public cloud, hybrid cloud), authorization path (e.g., Joint Authorization Board, Provisional Authorization), and a general system description.
 
+
+```
+rampcontrol-evidence:
+  named-evidence: location
+rampcontrol-dependent-on:
+  - control-id:
+    profile:
+reviewed-by:
+  - named:
+    date:
+rampcontrol-fedramp-props:
+  control-origination:
+    - Service provider Corporate
+    - Service provider System Specific
+    - Service Provider Hybrid (Corporate and System Specific)
+    - Configured by Customer (Customer System Specific) 
+    - Provided by Customer (Customer System Specific)
+    - Shared (Service Provider and Customer Responsibility)
+    - Inherited from pre-existing FedRAMP Authorization [Enter text here], Date of Authorization 
+  implementation-status:
+    - Implemented
+    - Partially implemented
+    - Planned
+    - Alternative implementation
+    - Not Applicable
+  responsible-roles:
+```
+
+
 ### POA&M Management
 - Create and Update POA&M Entries: Users can navigate to the "POA&M" section to add new entries or update existing ones. Each entry includes basic information such as the system name, date identified, control identifier, deviation types (functional, operational, risk assessment), detailed findings, action plans, and milestones.
 - View Existing Entries: The application displays existing POA&M entries for a selected system, allowing users to choose whether to create a new entry or update an existing one.
