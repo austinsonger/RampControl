@@ -1,4 +1,3 @@
-
 [submodule "cvss"]
 	path = base/submodules/cvss
 	url = https://github.com/FIRSTdotorg/cvss-v4-calculator.git
@@ -8,11 +7,3 @@
 [submodule "base/submodules/fedramp_automation"]
 	path = base/submodules/fedramp_automation
 	url = https://github.com/GSA/fedramp-automation.git
-
-
-[submodule "base/submodules/cvss"]
-	path = base/submodules/cvss
-	url = https://github.com/FIRSTdotorg/cvss-v4-calculator.git
-[submodule "base/submodules/oscal-rest"]
-	path = base/submodules/oscal-rest
-	url = https://github.com/EasyDynamics/oscal-rest
