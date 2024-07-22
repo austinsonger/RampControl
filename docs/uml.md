@@ -199,7 +199,54 @@ flowchart TD
 
 
 
+```
+digraph G {
+    subgraph cluster_ui {
+        label = "UI";
+        "Add System Form";
+        "Update System Form";
+        "Add POA&M Entry Form";
+        "Update POA&M Entry Form";
+        "Search Systems Form";
+        "Search POA&M Entries Form";
+    }
 
+    subgraph cluster_backend {
+        label = "Backend API";
+        "Add System Endpoint";
+        "Update System Endpoint";
+        "Add POA&M Entry Endpoint";
+        "Update POA&M Entry Endpoint";
+        "Search Systems Endpoint";
+        "Search POA&M Entries Endpoint";
+    }
+
+    subgraph cluster_db {
+        label = "Database";
+        Systems [
+            label = "Systems\n- id : int\n- csp_name : varchar\n- cso_name : varchar\n- fedramp_package_id : varchar\n- service_model : varchar\n- dil_determination : varchar\n- fips_pub_199_level : varchar\n- fully_operational : date\n- deployment_model : varchar\n- authorization_path : varchar\n- general_system_description : text"
+        ];
+        POAM [
+            label = "POAM\n- id : int\n- system_id : int\n- date_identified : date\n- control_identifier : varchar\n- deviations : varchar\n- findings : text\n- action_plan : jsonb\n- milestones : jsonb"
+        ];
+    }
+
+    "Add System Form" -> "Add System Endpoint";
+    "Update System Form" -> "Update System Endpoint";
+    "Add POA&M Entry Form" -> "Add POA&M Entry Endpoint";
+    "Update POA&M Entry Form" -> "Update POA&M Entry Endpoint";
+    "Search Systems Form" -> "Search Systems Endpoint";
+    "Search POA&M Entries Form" -> "Search POA&M Entries Endpoint";
+
+    "Add System Endpoint" -> Systems;
+    "Update System Endpoint" -> Systems;
+    "Add POA&M Entry Endpoint" -> POAM;
+    "Update POA&M Entry Endpoint" -> POAM;
+    "Search Systems Endpoint" -> Systems;
+    "Search POA&M Entries Endpoint" -> POAM;
+}
+
+```
 
 
 
